@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Cálculo INSS e Imposto de Renda</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+		
+        <h1>Cálculo INSS e Imposto de Renda</h1>
+		
+	</header>
+
+    <main>
+
+		<fieldset>
+			<div class="salario">
+				<label for="salario">Valor bruto do salário. *Apenas número.</label>
+				<p>Utilize . ao invés de , para decimais. (Ex: 1234.56)</p>
+				<input id="salario" onchange="inputDinheiro()">
+			</div>
+
+			<div class="pensao">
+				<label for="pensao">Valor da pensao, caso haja. *Apenas número.</label>
+				<p>Utilize . ao invés de , para decimais. (Ex: 1234.56)</p>
+				<input id="pensao" onchange="inputPensao()">
+			</div>
+
+			<div class="dependente">
+				<label for="dependente">Digite a quantidade referente ao número de dependentes, caso haja.</label>
+				<p></p>
+				<input id="dependente" onchange="inputDependente()">
+			</div>
+
+			<div>
+				<input type="button" value="Limpar campos" onclick="limpaCampo()">
+				<input type="button" value="Calcular Inss" onclick="calculaInss()">
+				<input type="button" value="Calcular I.R." onclick="calculaIr()">
+
+			</div>
+
+		</fieldset>
+
+        
+        <table>
+			<thead>
+					<tr>
+						<th>Faixa alíquota INSS</th>
+						<th>%</th>
+                        <th>Valor (R$)</th>
+					</tr>
+				</thead>
+				<tbody>	
+					<tr>
+						<td>Faixa 1</td>
+						<td class="porcentagemInss"></td>
+						<td class="valoresInss"></td>
+					</tr>
+					<tr>
+						<td>Faixa 2</td>
+						<td class="porcentagemInss"></td>
+						<td class="valoresInss"></td>
+					</tr>
+					<tr>
+						<td>Faixa 3</td>
+						<td class="porcentagemInss"></td>
+						<td class="valoresInss"></td>
+					</tr>
+                    <tr>
+                        <td>Faixa 4</td>
+                        <td class="porcentagemInss"></td>
+						<td class="valoresInss"></td>
+
+                    </tr>
+				</tbody>
+		</table>
+
+		<div>
+			
+			<p id="aliquotaEfetiva"></p>
+			<p id="inss"></p>
+
+		</div>
+
+
+        <table>
+			<thead>
+					<tr>
+						<th>Faixa alíquota I.R.</th>
+						<th>%</th>
+                        <th>Valor</th>
+					</tr>
+				</thead>
+				<tbody>	
+					<tr>
+						<td>Faixa 1</td>
+						<td class="porcentagemIr"></td>
+						<td class="valoresIr"></td>
+					</tr>
+					<tr>
+						<td>Faixa 2</td>
+						<td class="porcentagemIr"></td>
+						<td class="valoresIr"></td>
+					</tr>
+					<tr>
+						<td>Faixa 3</td>
+						<td class="porcentagemIr"></td>
+						<td class="valoresIr"></td>
+					</tr>
+                    <tr>
+                        <td>Faixa 4</td>
+                        <td class="porcentagemIr"></td>
+						<td class="valoresIr"></td>
+                    </tr>
+				</tbody>
+		</table>
+
+        <footer>
+            
+            <p class="copyright">&copy; Copyright Denis C - 2022</p>
+
+        </footer>
+        <script src="main.js"></script>
+    
+</body>
+</html>
