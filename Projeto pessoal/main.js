@@ -157,7 +157,7 @@ function calculaIr() {
 			} else {
 				if (salario > faixaIr[2] && salario <= faixaIr[3]) {
 
-					Ir = ((((faixaIr[1] - faixaIr[0]) * aliquota[0]) /100) + (((faixaIr[2] - faixaIr[1]) * aliquota[1]) /100) + (((salario - faixaIr[2]) * aliquotaIr[2]) /100)).toFixed(2);
+					Ir = ((((faixaIr[1] - faixaIr[0]) * aliquotaIr[0]) /100) + (((faixaIr[2] - faixaIr[1]) * aliquotaIr[1]) /100) + (((salario - faixaIr[2]) * aliquotaIr[2]) /100)).toFixed(2);
 
 					valoresIr[0].innerHTML = (((faixaIr[1] - faixaIr[0]) * aliquotaIr[0]) /100).toFixed(2);
 					valoresIr[1].innerHTML = (((faixaIr[2] - faixaIr[1]) * aliquotaIr[1]) /100).toFixed(2);
@@ -166,7 +166,7 @@ function calculaIr() {
 				} else {
 					if (salario > faixaIr[3]) {
 
-						Ir = ((((faixaIr[1] - faixaIr[0]) * aliquota[0]) /100) + (((faixaIr[2] - faixaIr[1]) * aliquotaIr[1]) /100) + (((faixaIr[3] - faixaIr[2]) * aliquotaIr[2]) /100) + (((salario - faixaIr[3]) * aliquota[3]) /100)).toFixed(2);
+						Ir = ((((faixaIr[1] - faixaIr[0]) * aliquotaIr[0]) /100) + (((faixaIr[2] - faixaIr[1]) * aliquotaIr[1]) /100) + (((faixaIr[3] - faixaIr[2]) * aliquotaIr[2]) /100) + (((salario - faixaIr[3]) * aliquota[3]) /100)).toFixed(2);
 
 						valoresIr[0].innerHTML = (((faixaIr[1] - faixaIr[0]) * aliquotaIr[0]) /100).toFixed(2);
 						valoresIr[1].innerHTML = (((faixaIr[2] - faixaIr[1]) * aliquotaIr[1]) /100).toFixed(2);
@@ -178,8 +178,15 @@ function calculaIr() {
 		}
 	}
 	console.log(Ir);
-	totalIr[0].innerHTML = ((Ir / salario) * 100).toFixed(2);
-	totalIr[1].innerHTML = Ir;
+
+	if (salario <= faixaIr[0]) {
+
+		totalIr[0].innerHTML = 0;
+		totalIr[1].innerHTML = 'isento';
+	} else {
+		totalIr[0].innerHTML = ((Ir / salario) * 100).toFixed(2);
+		totalIr[1].innerHTML = Ir;
+	 }
 }
 
 function limpaCampo() {
