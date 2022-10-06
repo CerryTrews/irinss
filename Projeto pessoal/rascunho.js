@@ -9,6 +9,7 @@ let porcentagemInss = document.getElementsByClassName("porcentagemInss");
 let porcentagemIr = document.getElementsByClassName("porcentagemIr");
 let valoresInss = document.getElementsByClassName("valoresInss");
 
+
 for (i = 0; i < aliquotaInss.length; i++) {
 	porcentagemInss[i].innerHTML = aliquotaInss[i];
 }
