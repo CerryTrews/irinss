@@ -123,8 +123,7 @@ function calculaInss() {
 function calculaIr() {
 
 	let salario = salarioBruto - inss;
-	let impostoDeRenda;
-	
+		
 	if (dependente > 0) {
 		
 		salario = salario - (dependente * 189.59)
