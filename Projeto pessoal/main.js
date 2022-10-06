@@ -132,10 +132,11 @@ function calculaIr() {
 
 	if (salario <= faixaIr[0]) {
 
-		valoresIr[0].innerHTML = 'isento';
-		valoresIr[1].innerHTML = 'isento';
-		valoresIr[2].innerHTML = 'isento';
-		valoresIr[3].innerHTML = 'isento';
+		for ( i = 0;i < faixaIr.length; i++) {
+
+			valoresIr[i].innerHTML = 'isento';
+		}
+
 	} else {
 		if (salario > faixaIr[0] && salario <= faixaIr[1]) {
 
