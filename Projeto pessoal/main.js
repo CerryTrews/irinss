@@ -22,15 +22,6 @@ function inputPensao() {
 }
 
 
-// fazer o html input number para dependente e pensão e a função para puxar esse valor pro js
-function imprime(texto) {
-	console.log(texto);
-}
-function tabela(texto) {
-	console.table(texto);
-}
-
-
 let faixaInss = [1212.0, 1212.0, 2427.37, 3641.04];
 let aliquotaIr = [7.5, 15, 22.5, 27.5];
 let aliquotaInss = [7.5, 9, 12, 14];
@@ -132,7 +123,7 @@ function calculaIr() {
 
 	if (salario <= faixaIr[0]) {
 
-		for ( i = 0;i < faixaIr.length; i++) {
+		for ( i = 0; i < faixaIr.length; i++) {
 
 			valoresIr[i].innerHTML = 'isento';
 		}
@@ -205,16 +196,4 @@ function limpaCampo() {
 
 }
 
-
-
-
-	// getElementsyId("aliquotaEfetiva").innerHTML = `Alíquota Efetiva: ${(((inss / salarioBruto) * 100).toFixed(2))}%`;
-
-
-
-
-// inss funciona pq o valor vem direto do html mas o ir não pois o valor sai do calculo do inss ( arrumar )
-
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
 
