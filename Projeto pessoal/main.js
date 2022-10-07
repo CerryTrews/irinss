@@ -101,10 +101,10 @@ function calculaInss() {
 
 
 	}
+
 	console.log(inss);
 	total[0].innerHTML = ((inss / salarioBruto) * 100).toFixed(2);
 	total[1].innerHTML = inss;
-
 
 }
 
