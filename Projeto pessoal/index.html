@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<title>Cálculo INSS e Imposto de Renda</title>
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-		
-        <h1>Cálculo INSS e Imposto de Renda</h1>
-		
+	<header>
+
+		<h1>Cálculo INSS e Imposto de Renda</h1>
+
 	</header>
 
-    <main>
+	
+	<main>
 
 		<fieldset>
 			<div class="salario">
@@ -38,21 +41,19 @@
 				<input type="button" value="Limpar tabela" onclick="limpaCampo()">
 				<input type="button" value="Calcular Inss" onclick="calculaInss()">
 				<input type="button" value="Calcular I.R." onclick="calculaIr()">
-
 			</div>
 
 		</fieldset>
 
-        
-        <table>
-			<thead>
+
+		<div class="row">
+			<div class="column">
+				<table>
 					<tr>
 						<th>Faixas INSS</th>
 						<th>(%)</th>
-                        <th>Valor (R$)</th>
+						<th>Valor (R$)</th>
 					</tr>
-				</thead>
-				<tbody>	
 					<tr>
 						<td>Faixa 1</td>
 						<td class="porcentagemInss"></td>
@@ -68,130 +69,125 @@
 						<td class="porcentagemInss"></td>
 						<td class="valoresInss"></td>
 					</tr>
-                    <tr>
-                        <td>Faixa 4</td>
-                        <td class="porcentagemInss"></td>
+					<tr>
+						<td>Faixa 4</td>
+						<td class="porcentagemInss"></td>
 						<td class="valoresInss"></td>
-						
-                    </tr>
+
+					</tr>
 					<tr>
 						<td>Total</td>
 						<td class="total"></td>
 						<td class="total"></td>
 					</tr>
-				</tbody>
-		</table>
-
-		<table>
-			<thead>
-					<tr>
-						<th>Faixa I.R.</th>
-						<th>(%)</th>
-                        <th>Valor(R$)</th>
-					</tr>
-				</thead>
-				<tbody>	
-					<tr>
-						<td>Faixa 1</td>
-						<td class="porcentagemIr"></td>
-						<td class="valoresIr"></td>
-					</tr>
-					<tr>
-						<td>Faixa 2</td>
-						<td class="porcentagemIr"></td>
-						<td class="valoresIr"></td>
-					</tr>
-					<tr>
-						<td>Faixa 3</td>
-						<td class="porcentagemIr"></td>
-						<td class="valoresIr"></td>
-					</tr>
-                    <tr>
-                        <td>Faixa 4</td>
-                        <td class="porcentagemIr"></td>
-						<td class="valoresIr"></td>
-                    </tr>
-					<tr>
-						<td>Total</td>
-						<td class="totalIr"></td>
-						<td class="totalIr"></td>
-					</tr>
-				</tbody>
-		</table>
-
-		<table>
-			<thead>
+				</table>
+			</div>
+			<div class="column">
+				<table>
 					<tr>
 						<th>Legenda INSS</th>
 						<th>(%)</th>
-                    </tr>
-				</thead>
-				<tbody>	
+					</tr>
 					<tr>
 						<td>Até R$ 1212,00</td>
 						<td>7.5</td>
-						
+
 					</tr>
 					<tr>
 						<td>De R$ 1212,01 até R$ 2427,37</td>
 						<td>9</td>
-						
+
 					</tr>
 					<tr>
 						<td>De R$ 2427,38 até R$ 3641,04</td>
 						<td>12</td>
-						
-					</tr>
-                    <tr>
-                        <td>Acima de R$ 3641,04</td>
-                        <td>14</td>
-					</tr>
-					
-				</tbody>
-		</table>
 
+					</tr>
+					<tr>
+						<td>Acima de R$ 3641,04</td>
+						<td>14</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+<div class="row">
+	<div class="column">
 		<table>
-			<thead>
-					<tr>
-						<th>Legenda Imposto de Renda</th>
-						<th>(%)</th>
-                    </tr>
-				</thead>
-				<tbody>	
-					<tr>
-						<td>Até R$ 1903,98</td>
-						<td>0</td>
-						<td>Isento</td>
-						
-					</tr>
-					<tr>
-						<td>De R$ 1903,99 até R$ 2826,65</td>
-						<td>7.5</td>
-						
-					</tr>
-					<tr>
-						<td>De R$ 2826,66 até R$ 3751,05</td>
-						<td>15</td>
-						
-					</tr>
-                    <tr>
-                        <td>De R$ 3641,06 até R$ 4664,68</td>
-                        <td>22.5</td>
-					</tr>
-					<tr>
-                        <td>Acima de R$ 4664,68</td>
-                        <td>27.5</td>
-					</tr>
-					
-				</tbody>
+			<tr>
+				<th>Faixa I.R.</th>
+				<th>(%)</th>
+				<th>Valor(R$)</th>
+			</tr>
+			<tr>
+				<td>Faixa 1</td>
+				<td class="porcentagemIr"></td>
+				<td class="valoresIr"></td>
+			</tr>
+			<tr>
+				<td>Faixa 2</td>
+				<td class="porcentagemIr"></td>
+				<td class="valoresIr"></td>
+			</tr>
+			<tr>
+				<td>Faixa 3</td>
+				<td class="porcentagemIr"></td>
+				<td class="valoresIr"></td>
+			</tr>
+			<tr>
+				<td>Faixa 4</td>
+				<td class="porcentagemIr"></td>
+				<td class="valoresIr"></td>
+			</tr>
+			<tr>
+				<td>Total</td>
+				<td class="totalIr"></td>
+				<td class="totalIr"></td>
+			</tr>
 		</table>
+	</div>
+	
 
-        <footer>
-            
-            <p class="copyright">&copy; Copyright Denis C - 2022</p>
 
-        </footer>
-        <script src="main.js"></script>
-    
+	<div class="column">
+		<table>
+			<tr>
+				<th>Legenda Imposto de Renda</th>
+				<th>(%)</th>
+			</tr>
+			
+			
+			<tr>
+				<td>Até R$ 1903,98</td>
+				<td>0</td>
+				<td>Isento</td>
+
+			</tr>
+			<tr>
+				<td>De R$ 1903,99 até R$ 2826,65</td>
+				<td>7.5</td>
+
+			</tr>
+			<tr>
+				<td>De R$ 2826,66 até R$ 3751,05</td>
+				<td>15</td>
+
+			</tr>
+			<tr>
+				<td>De R$ 3641,06 até R$ 4664,68</td>
+				<td>22.5</td>
+			</tr>
+			<tr>
+				<td>Acima de R$ 4664,68</td>
+				<td>27.5</td>
+			</tr>
+			
+		</table>
+	</div>
+</div>
+
 </body>
+
+<script src="main.js"></script>
+
 </html>
