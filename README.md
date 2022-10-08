@@ -9,6 +9,7 @@
 
 
 ```
-Para rodar esse projeto na sua máquina, por favor abra o arquivo index.html com seu navegador de preferência.
+Para rodar esse projeto na sua máquina, por favor abra o arquivo
+index.html com seu navegador de preferência.
 ```
 
