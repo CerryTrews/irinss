@@ -158,7 +158,7 @@ function calculaIr() {
 				} else {
 					if (salario > faixaIr[3]) {
 
-						Ir = ((((faixaIr[1] - faixaIr[0]) * aliquotaIr[0]) /100) + (((faixaIr[2] - faixaIr[1]) * aliquotaIr[1]) /100) + (((faixaIr[3] - faixaIr[2]) * aliquotaIr[2]) /100) + (((salario - faixaIr[3]) * aliquota[3]) /100)).toFixed(2);
+						Ir = ((((faixaIr[1] - faixaIr[0]) * aliquotaIr[0]) /100) + (((faixaIr[2] - faixaIr[1]) * aliquotaIr[1]) /100) + (((faixaIr[3] - faixaIr[2]) * aliquotaIr[2]) /100) + (((salario - faixaIr[3]) * aliquotaIr[3]) /100)).toFixed(2);
 
 						valoresIr[0].innerHTML = (((faixaIr[1] - faixaIr[0]) * aliquotaIr[0]) /100).toFixed(2);
 						valoresIr[1].innerHTML = (((faixaIr[2] - faixaIr[1]) * aliquotaIr[1]) /100).toFixed(2);
