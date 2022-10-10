@@ -21,20 +21,20 @@
 		<fieldset>
 			<div class="salario">
 				<label for="salario">Valor bruto do salário. *Apenas número.</label>
-				<p>Utilize . ao invés de , para decimais. (Ex: 1234.56)</p>
-				<input id="salario" onchange="inputDinheiro()">
+				<p></p>
+				<input id="salario" placeholder="0000,00" onchange="inputDinheiro()">
 			</div>
 
 			<div class="pensao">
-				<label for="pensao">Valor da pensao, caso haja. *Apenas número.</label>
-				<p>Utilize . ao invés de , para decimais. (Ex: 1234.56)</p>
-				<input id="pensao" onchange="inputPensao()">
+				<label for="pensao">Valor da pensao, caso haja.</label>
+				<p></p>
+				<input id="pensao" placeholder="000,00" onchange="inputPensao()">
 			</div>
 
 			<div class="dependente">
 				<label for="dependente">Digite a quantidade referente ao número de dependentes, caso haja.</label>
 				<p></p>
-				<input id="dependente" onchange="inputDependente()">
+				<input id="dependente" type="number" placeholder="0" onchange="inputDependente()">
 			</div>
 
 			<div>

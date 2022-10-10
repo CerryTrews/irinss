@@ -5,8 +5,10 @@ let pensao = 0;
 
 function inputDinheiro() {
 	salarioBruto = document.getElementById("salario").value;
+	let salarioA = salarioBruto.replace(/,/g, ".");
+	salarioBruto = salarioA;
 	
-	parseFloat(salarioBruto);
+	// parseFloat(salarioBruto);
 	console.log(salarioBruto);
 	// 	document.getElementById("dinheiro").innerHTML = "Seu salário é de R$" + salarioBruto;
 }
@@ -19,6 +21,8 @@ function inputDependente() {
 
 function inputPensao() {
 	pensao = document.getElementById("pensao").value;
+	let pensaoA = pensao.replace(/,/g, ".");
+	pensao = pensaoA
 	console.log(pensao);
 
 }
@@ -187,14 +191,12 @@ function limpaCampo() {
 
 	total[0].innerHTML = 0;
 	total[1].innerHTML = 0;
-	valoresInss[0].innerHTML = 0;
-	valoresInss[1].innerHTML = 0;
-	valoresInss[2].innerHTML = 0;
-	valoresInss[3].innerHTML = 0;
-	valoresIr[0].innerHTML = 0;
-	valoresIr[1].innerHTML = 0;
-	valoresIr[2].innerHTML = 0;
-	valoresIr[3].innerHTML = 0;
+
+	for (i = 0; i < valoresInss.length; i++) {
+		valoresInss[i].innerHTML = 0;
+		valoresIr[i].innerHTML = 0;
+	}
+
 
 }
 
