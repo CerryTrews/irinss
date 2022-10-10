@@ -5,6 +5,8 @@ let pensao = 0;
 
 function inputDinheiro() {
 	salarioBruto = document.getElementById("salario").value;
+	
+	parseFloat(salarioBruto);
 	console.log(salarioBruto);
 	// 	document.getElementById("dinheiro").innerHTML = "Seu salário é de R$" + salarioBruto;
 }
