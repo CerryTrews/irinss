@@ -191,12 +191,14 @@ function calculaIr() {
 
 function limpaCampo() {
 
-	total[0].innerHTML = 0;
-	total[1].innerHTML = 0;
+	 total[0].innerHTML = 0;
+	 total[1].innerHTML = 0;
 
 	for (i = 0; i < valoresInss.length; i++) {
 		valoresInss[i].innerHTML = 0;
 		valoresIr[i].innerHTML = 0;
+
+		
 	}
 
 
