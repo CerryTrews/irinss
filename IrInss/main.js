@@ -3,6 +3,8 @@ let dependente = 0;
 let pensao = 0;
 
 
+// arrumar a versão do , para .
+
 function inputDinheiro() {
 	salarioBruto = document.getElementById("salario").value;
 	let salarioA = salarioBruto.replace(/,/g, ".");
