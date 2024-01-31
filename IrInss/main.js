@@ -2,23 +2,17 @@ let salarioBruto = 0;
 let dependente = 0;
 let pensao = 0;
 
-
-// arrumar a versão do , para .
-
 function inputDinheiro() {
 	salarioBruto = document.getElementById("salario").value;
 	let salarioA = salarioBruto.replace(/,/g, ".");
 	salarioBruto = salarioA;
 	
-	// parseFloat(salarioBruto);
 	console.log(salarioBruto);
-	// 	document.getElementById("dinheiro").innerHTML = "Seu salário é de R$" + salarioBruto;
 }
 
 function inputDependente() {
 	dependente = document.getElementById("dependente").value;
 	console.log(dependente);
-
 }
 
 function inputPensao() {
@@ -26,9 +20,7 @@ function inputPensao() {
 	let pensaoA = pensao.replace(/,/g, ".");
 	pensao = pensaoA
 	console.log(pensao);
-
 }
-
 
 let faixaInss = [1212.0, 1212.0, 2427.37, 3641.04];
 let aliquotaIr = [7.5, 15, 22.5, 27.5];
@@ -44,9 +36,6 @@ let valoresIr = document.getElementsByClassName("valoresIr");
 let total = document.getElementsByClassName("total");
 let totalIr = document.getElementsByClassName("totalIr");
 
-
-
-
 for (aliquotaAtual = 0; aliquotaAtual < aliquotaInss.length; aliquotaAtual++) {
 	porcentagemInss[aliquotaAtual].innerHTML = aliquotaInss[aliquotaAtual];
 }
@@ -55,22 +44,16 @@ for (aliquotaAtual = 0; aliquotaAtual < aliquotaIr.length; aliquotaAtual++) {
 	porcentagemIr[aliquotaAtual].innerHTML = aliquotaIr[aliquotaAtual];
 }
 
-
-
 function calculaInss() {
-
 	if (salarioBruto <= faixaInss[0]) {
 		inss = ((salarioBruto * aliquotaInss[0]) / 100).toFixed(2);
-
+		
 		valoresInss[0].innerHTML = ((salarioBruto * aliquotaInss[0]) / 100).toFixed(2);
-
 	} else {
 		if (salarioBruto > faixaInss[0] && salarioBruto <= faixaInss[2]) {
-
 			inss = (((faixaInss[0] * aliquotaInss[0]) / 100)
-				+ (((salarioBruto - faixaInss[0]) * aliquotaInss[1]) / 100)).toFixed(2);
-
-
+			+ (((salarioBruto - faixaInss[0]) * aliquotaInss[1]) / 100)).toFixed(2);
+			
 			valoresInss[0].innerHTML = ((faixaInss[0] * aliquotaInss[0]) / 100).toFixed(2);
 			valoresInss[1].innerHTML = (((salarioBruto - faixaInss[0]) * aliquotaInss[1]) / 100).toFixed(2);
 
@@ -92,36 +75,25 @@ function calculaInss() {
 						+ (((faixaInss[2] - faixaInss[0]) * aliquotaInss[1]) / 100)
 						+ (((faixaInss[3] - faixaInss[2]) * aliquotaInss[2]) / 100)
 						+ (((salarioBruto - faixaInss[3]) * aliquotaInss[3]) / 100)).toFixed(2);
-
-
+					
 					valoresInss[0].innerHTML = ((faixaInss[0] * aliquotaInss[0]) / 100).toFixed(2);
 					valoresInss[1].innerHTML = (((faixaInss[2] - faixaInss[0]) * aliquotaInss[1]) / 100).toFixed(2);
 					valoresInss[2].innerHTML = (((faixaInss[3] - faixaInss[2]) * aliquotaInss[2]) / 100).toFixed(2);
 					valoresInss[3].innerHTML = (((salarioBruto - faixaInss[3]) * aliquotaInss[3]) / 100).toFixed(2);
-
-
 				}
-
 			}
-
-
 		}
-
-
 	}
 
 	console.log(inss);
 	total[0].innerHTML = ((inss / salarioBruto) * 100).toFixed(2);
 	total[1].innerHTML = inss;
-
 }
 
 function calculaIr() {
 
 	let salario = salarioBruto - inss;
-		
 	if (dependente > 0) {
-		
 		salario = salario - (dependente * 189.59)
 	}
 	
@@ -130,9 +102,7 @@ function calculaIr() {
 	}
 
 	if (salario <= faixaIr[0]) {
-
 		for ( i = 0; i < faixaIr.length; i++) {
-
 			valoresIr[i].innerHTML = 'isento';
 		}
 
@@ -186,7 +156,7 @@ function calculaIr() {
 	} else {
 		totalIr[0].innerHTML = ((Ir / salario) * 100).toFixed(2);
 		totalIr[1].innerHTML = Ir;
-	 }
+	}
 }
 
 function limpaCampo() {
@@ -197,11 +167,7 @@ function limpaCampo() {
 	for (i = 0; i < valoresInss.length; i++) {
 		valoresInss[i].innerHTML = 0;
 		valoresIr[i].innerHTML = 0;
-
-		
 	}
-
-
 }
 
 
