@@ -1,3 +1,5 @@
+<h1>Desatualizado, funciona apenas nos parâmetros do ano de 2023</h1>
+
 # irinss
 <h1>Sistema de cálculo de inss e imposto de renda</h1>
 
